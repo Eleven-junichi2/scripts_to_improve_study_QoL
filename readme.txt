@@ -1,0 +1,7 @@
+1 写真を撮る
+2 各写真のファイル名を連番
+※スクリプトで処理したい対象のファイルをwhere_to_place_file_to_be_processedディレクトリに置く。
+3 ketsuban_checkスクリプトで欠番を調べる。あれば1からやり直し
+4 make_qimg_to_aimg_anki_deckスクリプトでAnkiデッキを作成する。
+5 用意した画像はreduce_img_datasizeスクリプトで色数を減らし、サイズを減らせる。
+※ 画像をあらかじめ%AppData%\Roaming\Anki2\ユーザー名\collection.mediaディレクトリに入れておくこと。

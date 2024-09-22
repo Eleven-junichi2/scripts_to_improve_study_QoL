@@ -1,0 +1,23 @@
+#separator:tab
+#html:true
+#notetype column:1
+基本	<img src="chart1a-1-10q.JPG">	<img src="chart1a-1-10a-cs.jpg">
+基本	<img src="chart1a-1-11q.JPG">	<img src="chart1a-1-11a-cs.jpg">
+基本	<img src="chart1a-1-12q.JPG">	<img src="chart1a-1-12a-cs.jpg">
+基本	<img src="chart1a-1-13q.JPG">	<img src="chart1a-1-13a-cs.jpg">
+基本	<img src="chart1a-1-14q.JPG">	<img src="chart1a-1-14a-cs.jpg">
+基本	<img src="chart1a-1-15q.JPG">	<img src="chart1a-1-15a-cs.jpg">
+基本	<img src="chart1a-1-16q.JPG">	<img src="chart1a-1-16a-cs.jpg">
+基本	<img src="chart1a-1-17q.JPG">	<img src="chart1a-1-17a-cs.jpg">
+基本	<img src="chart1a-1-18q.JPG">	<img src="chart1a-1-18a-cs.jpg">
+基本	<img src="chart1a-1-19q.JPG">	<img src="chart1a-1-19a-cs.jpg">
+基本	<img src="chart1a-1-1q.JPG">	<img src="chart1a-1-1a-cs.jpg">
+基本	<img src="chart1a-1-20q.JPG">	<img src="chart1a-1-20a-cs.jpg">
+基本	<img src="chart1a-1-2q.JPG">	<img src="chart1a-1-2a-cs.jpg">
+基本	<img src="chart1a-1-3q.JPG">	<img src="chart1a-1-3a-cs.jpg">
+基本	<img src="chart1a-1-4q.JPG">	<img src="chart1a-1-4a-cs.jpg">
+基本	<img src="chart1a-1-5q.JPG">	<img src="chart1a-1-5a-cs.jpg">
+基本	<img src="chart1a-1-6q.JPG">	<img src="chart1a-1-6a-cs.jpg">
+基本	<img src="chart1a-1-7q.JPG">	<img src="chart1a-1-7a-cs.jpg">
+基本	<img src="chart1a-1-8q.JPG">	<img src="chart1a-1-8a-cs.jpg">
+基本	<img src="chart1a-1-9q.JPG">	<img src="chart1a-1-9a-cs.jpg">
