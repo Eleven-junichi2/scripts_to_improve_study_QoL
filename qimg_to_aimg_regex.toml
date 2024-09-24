@@ -1,0 +1,21 @@
+[chart1a]
+q = 'chart1a-\d-(\d)+q$'
+a = 'chart1a-\d-(\d)+a'
+[chart2b]
+q = 'chart2b-\d-(\d)+q$'
+a = 'chart2b-\d-(\d)+a'
+[chart3c]
+q = 'chart3c-\d-(\d)+q$'
+a = 'chart3c-\d-(\d)+a'
+[chart1a_c-and-s]
+q = 'chart1a-\d-(\d)+q-cs$'
+a = 'chart1a-\d-(\d)+a-cs'
+[chart2b_c-and-s]
+q = 'chart2b-\d-(\d)+q-cs$'
+a = 'chart2b-\d-(\d)+a-cs'
+[chart3c_c-and-s]
+q = 'chart3c-\d-(\d)+q-cs$'
+a = 'chart3c-\d-(\d)+a-cs'
+[kobuntango]
+q = 'kobuntango-\dq'
+a = 'kobuntango-\da'

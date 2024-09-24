@@ -1,42 +1,58 @@
 from pathlib import Path
+import tomllib
 import re
 
-command = int(input("chart?(1: 1a, 2: 2b, 3: 3c)"))
+with open(Path(__file__).parent / "qimg_to_aimg_regex.toml", "rb") as f:
+    qimg_to_aimg_patterns = tomllib.load(f)
 
-if command == 1:
-    chart_type = "1a"
-elif command == 2:
-    chart_type = "2b"
-elif command == 3:
-    chart_type = "3c"
+commands = tuple(qimg_to_aimg_patterns.keys())
 
-answer_type = int(input("answer type?(1: chart & solution, 2: model answer)"))
+while True:
+    try:
+        command = int(
+            input(
+                f"which pattern will you use?: {" ".join([f'({i}:{cmd})' for i, cmd in enumerate(commands)])}>"
+            )
+        )
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+    else:
+        break
+print(f"command: {commands[command]}")
 
-filenames_may_contains_missing = []
-
-match_question = re.compile(rf"chart{chart_type}-" + r"\d-(\d)+q$")
-
-regex_str = rf"chart{chart_type}-" + r"\d-(\d)+a"
-if answer_type == 1:
-    regex_str += "-cs$"
-elif answer_type == 2:
-    regex_str += "-ma$"
-match_answer = re.compile(regex_str)
+prefix_regex_pattern = r"\.|jpg|JPG|png|"
+match_question = re.compile(
+    qimg_to_aimg_patterns[commands[command]]["q"] + prefix_regex_pattern
+)
+match_answer = re.compile(
+    qimg_to_aimg_patterns[commands[command]]["a"] + prefix_regex_pattern
+)
+print("regex pattern: for answer:", match_question.pattern)
+print("regex pattern for question:", match_answer.pattern)
 
 question_img_filenames: list[Path] = []
 answer_img_filenames: list[Path] = []
 question_img_dirname = "questions"
 answer_img_dirname = "answers"
+
 for path in (Path(__file__).parent / question_img_dirname).iterdir():
-    print(path.name)
+    print(path.name, end=" ")
     if match_question.match(path.stem):
         question_img_filenames.append(path.name)
+        print("match!")
+    else:
+        print("")
 question_img_filenames.sort()
+
 for path in (Path(__file__).parent / answer_img_dirname).iterdir():
-    print(path.name)
+    print(path.name, end=" ")
     if match_answer.match(path.stem):
         answer_img_filenames.append(path.name)
+        print("match!")
+    else:
+        print("")
 answer_img_filenames.sort()
+
 exported_as_anki_deck = "#separator:tab\n"
 exported_as_anki_deck += "#html:true\n"
 exported_as_anki_deck += "#notetype column:1\n"
